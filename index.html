@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Répertoire des signes pour 🦐</title>
+  <meta name="description" content="Dictionnaire de signes pour bébé — 68 mots du quotidien illustrés par des vidéos du dictionnaire Elix LSF." />
+  <meta name="theme-color" content="#e76f51" />
+
+  <!-- Partage (Open Graph / iMessage / WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Répertoire des signes pour 🦐" />
+  <meta property="og:description" content="Apprendre la langue des signes pour bébé — 68 signes du quotidien." />
+  <meta property="og:image" content="/icon-512.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- PWA + icônes -->
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%90%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+
+  <!-- Préconnexion au CDN vidéo : accélère le 1er clic sur une card -->
+  <link rel="preconnect" href="https://elix-lsf.s3.rbx.io.cloud.ovh.net" crossorigin />
+  <link rel="dns-prefetch" href="https://elix-lsf.s3.rbx.io.cloud.ovh.net" />
+  <style>
+    :root {
+      --bg: #fdf8f3;
+      --card: #ffffff;
+      --primary: #f4a261;
+      --primary-dark: #e76f51;
+      --text: #2a3439;
+      --muted: #7a8a90;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 32px 16px;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: 0 auto 24px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .search {
+      max-width: 400px;
+      margin: 24px auto 0;
+      display: block;
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #eadfd2;
+      border-radius: 12px;
+      background: white;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search:focus { border-color: var(--primary); }
+
+    .filters {
+      max-width: 1100px;
+      margin: 16px auto 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .filter-btn {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 2px solid #eadfd2;
+      background: white;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+
+    .filter-btn:hover { border-color: var(--primary); }
+
+    .filter-btn.active {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+      color: white;
+    }
+
+    .sections {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #eadfd2;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .section-count {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      h1 { font-size: 1.5rem; }
+      .section-title { font-size: 1.2rem; }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 20px 12px 14px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: transform 0.15s, box-shadow 0.15s;
+      border: none;
+      font-family: inherit;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card:hover, .card:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      outline: none;
+    }
+
+    .card .emoji {
+      font-size: 2.5rem;
+      display: block;
+    }
+
+    .card .word {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+      margin-top: 2px;
+      letter-spacing: 0.01em;
+    }
+
+    .empty {
+      color: var(--muted);
+      font-style: italic;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 16px;
+    }
+
+    .modal-backdrop.open { display: flex; }
+
+    .modal {
+      background: white;
+      border-radius: 16px;
+      max-width: 600px;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      animation: slideUp 0.2s ease-out;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-header {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+    }
+
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .close-btn {
+      background: #f4f0eb;
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+    }
+
+    .close-btn:hover { background: #e8dfd2; }
+
+    .modal-body {
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+    }
+
+    .modal-body video {
+      width: 100%;
+      height: auto;
+      max-height: 70vh;
+      display: block;
+    }
+
+    .modal-footer {
+      padding: 12px 20px;
+      border-top: 1px solid #eee;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .modal-footer a {
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .modal-footer a:hover { text-decoration: underline; }
+
+    footer {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Répertoire des signes pour 🦐</h1>
+    <p>Cliquez sur un signe pour voir la vidéo</p>
+    <input type="search" class="search" id="search" placeholder="Rechercher un signe…" aria-label="Rechercher un signe" />
+  </header>
+
+  <nav class="filters" id="filters" aria-label="Filtrer par catégorie"></nav>
+
+  <main class="sections" id="sections" aria-live="polite"></main>
+
+  <footer>
+    Vidéos issues du dictionnaire <a href="https://dico.elix-lsf.fr/" target="_blank" rel="noopener">Elix LSF</a>
+  </footer>
+
+  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-title"></div>
+        <button class="close-btn" id="close-btn" aria-label="Fermer">✕</button>
+      </div>
+      <div class="modal-body">
+        <video id="modal-video" controls autoplay playsinline preload="auto"></video>
+      </div>
+      <div class="modal-footer">
+        <a id="modal-link" href="#" target="_blank" rel="noopener">Voir sur Elix LSF ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Couleurs : `color` (texte/bordure) garanti ≥ 4.5:1 contre `bg` ET contre blanc (WCAG AA)
+    const CATS = {
+      "Repas": { color: "#8a3a14", bg: "#ffe8d6" },
+      "Sommeil & soins": { color: "#1f4d6b", bg: "#dceaf3" },
+      "Personnes & lieux": { color: "#8a2848", bg: "#fae0e7" },
+      "Émotions & ressenti": { color: "#3d2a85", bg: "#e8e3f5" },
+      "Activités & jeu": { color: "#1d5c37", bg: "#e0f2e9" },
+      "Communication & politesse": { color: "#6b5210", bg: "#fbf1c7" },
+      "Consignes & sécurité": { color: "#8a2d1c", bg: "#fadcd3" },
+    };
+
+    const PRIORITIES = ["Premiers signes", "À venir", "Plus tard"];
+
+    const signs = [
+      // Repas
+      { word: "Lait", emoji: "🥛", cat: "Repas", prio: "Premiers signes", page: "lait", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/lait_nm_1_1.mp4" },
+      { word: "Manger", emoji: "🍽️", cat: "Repas", prio: "Premiers signes", page: "manger", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/00280.mp4" },
+      { word: "Encore", emoji: "🔁", cat: "Repas", prio: "Premiers signes", page: "encore", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/encore_adv_1_1.mp4" },
+      { word: "Terminé", emoji: "👌", cat: "Repas", prio: "Premiers signes", page: "terminé", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/termine_adj_1_6.mp4" },
+      { word: "Boire", emoji: "🍼", cat: "Repas", prio: "À venir", page: "boire", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/boire-2.mp4" },
+      { word: "Bon", emoji: "👍", cat: "Repas", prio: "À venir", page: "bon", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/bon_adj_1_1.mp4" },
+      { word: "Compote", emoji: "🥣", cat: "Repas", prio: "À venir", page: "compote", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/compote_nf_1_2.mp4" },
+      { word: "Purée", emoji: "🥔", cat: "Repas", prio: "À venir", page: "purée", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/puree_nf_1_2.mp4" },
+      { word: "Fruit", emoji: "🍎", cat: "Repas", prio: "À venir", page: "fruit", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/fruit.mp4" },
+      { word: "Légume", emoji: "🥦", cat: "Repas", prio: "À venir", page: "légume", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/legume_nm_1_1.mp4" },
+      { word: "Banane", emoji: "🍌", cat: "Repas", prio: "À venir", page: "banane", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/00048.mp4" },
+      { word: "Pomme", emoji: "🍏", cat: "Repas", prio: "À venir", page: "pomme", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/pomme_nf_1_1.mp4" },
+      { word: "Carottes", emoji: "🥕", cat: "Repas", prio: "À venir", page: "carotte", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/carotte_adj_1_11.mp4" },
+      { word: "Fraise", emoji: "🍓", cat: "Repas", prio: "Plus tard", page: "fraise", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/fraise_adj_1_6.mp4" },
+      { word: "Pomme de terre", emoji: "🥔", cat: "Repas", prio: "Plus tard", page: "pomme de terre", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/pommedeterre_nf_1_1.mp4" },
+      { word: "Tomates", emoji: "🍅", cat: "Repas", prio: "Plus tard", page: "tomate", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/tomate_nf_1_1.mp4" },
+      { word: "Petits-pois", emoji: "🟢", cat: "Repas", prio: "Plus tard", page: "pois", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/pois_nm_1_1_6.mp4" },
+      { word: "Viande", emoji: "🥩", cat: "Repas", prio: "Plus tard", page: "viande", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/viande_nf_1_1.mp4" },
+      { word: "Oeufs", emoji: "🥚", cat: "Repas", prio: "Plus tard", page: "œuf", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/oeuf.mp4" },
+      { word: "Fromage", emoji: "🧀", cat: "Repas", prio: "Plus tard", page: "fromage", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/fromage_nm_1_1.mp4" },
+      { word: "Poisson", emoji: "🐟", cat: "Repas", prio: "Plus tard", page: "poisson", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/poisson.mp4" },
+
+      // Sommeil & soins
+      { word: "Dormir", emoji: "😴", cat: "Sommeil & soins", prio: "Premiers signes", page: "dormir", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/dormir_v_1_1.mp4" },
+      { word: "Changer", emoji: "🔃", cat: "Sommeil & soins", prio: "À venir", page: "changer", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/changer_v_1_1_6.mp4" },
+      { word: "Couche", emoji: "🧷", cat: "Sommeil & soins", prio: "À venir", page: "couche/n.f.-148908", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/couche_nf_2_1.mp4" },
+      { word: "Caca", emoji: "💩", cat: "Sommeil & soins", prio: "À venir", page: "caca", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/caca_nm_1_1.mp4" },
+      { word: "Pipi", emoji: "💧", cat: "Sommeil & soins", prio: "À venir", page: "pipi", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/90_pipi_1__nm_1td_ddy001-encoded.mp4" },
+      { word: "Fatigué", emoji: "😪", cat: "Sommeil & soins", prio: "À venir", page: "fatigue", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/fatigue_nf_1_1.mp4" },
+      { word: "Se réveiller", emoji: "🌅", cat: "Sommeil & soins", prio: "À venir", page: "réveiller", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/reveiller_v_1_1.mp4" },
+
+      // Personnes & lieux
+      { word: "Doudou", emoji: "🧸", cat: "Personnes & lieux", prio: "Premiers signes", page: "doudou", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/doudou_nm_10_6-2.mp4" },
+      { word: "Maman", emoji: "👩", cat: "Personnes & lieux", prio: "À venir", page: "maman", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/maman_nf_1_2.mp4" },
+      { word: "Papa", emoji: "👨", cat: "Personnes & lieux", prio: "À venir", page: "papa", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/papa.mp4" },
+      { word: "Crèche", emoji: "🏫", cat: "Personnes & lieux", prio: "Plus tard", page: "crèche", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/00121.mp4" },
+
+      // Émotions & ressenti
+      { word: "Content", emoji: "😊", cat: "Émotions & ressenti", prio: "À venir", page: "content", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/content_adj_2_1.mp4" },
+      { word: "Triste", emoji: "😢", cat: "Émotions & ressenti", prio: "À venir", page: "triste", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/triste.mp4" },
+      { word: "Câlin", emoji: "🤗", cat: "Émotions & ressenti", prio: "À venir", page: "câlin", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/00227-3.mp4" },
+      { word: "Aimer", emoji: "❤️", cat: "Émotions & ressenti", prio: "À venir", page: "aimer", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/aimer-2.mp4" },
+      { word: "Peur", emoji: "😨", cat: "Émotions & ressenti", prio: "Plus tard", page: "peur", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/peur.mp4" },
+      { word: "Colère", emoji: "😠", cat: "Émotions & ressenti", prio: "Plus tard", page: "colère", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/colere_nf_1_1.mp4" },
+      { word: "Surpris", emoji: "😲", cat: "Émotions & ressenti", prio: "Plus tard", page: "surprise", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/surprise_nf_1_1.mp4" },
+      { word: "Calme", emoji: "🧘", cat: "Émotions & ressenti", prio: "Plus tard", page: "calme", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/calme_adj_1_1.mp4" },
+      { word: "Ne pas aimer", emoji: "💔", cat: "Émotions & ressenti", prio: "Plus tard", page: "détester", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/detester_v_1_1.mp4" },
+      { word: "Avoir mal", emoji: "🤕", cat: "Émotions & ressenti", prio: "Plus tard", page: "mal", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/mal_adj_1_1.mp4" },
+      { word: "Chaud", emoji: "🥵", cat: "Émotions & ressenti", prio: "Plus tard", page: "chaud", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/chaud_adj_1_1.mp4" },
+      { word: "Froid", emoji: "🥶", cat: "Émotions & ressenti", prio: "Plus tard", page: "froid", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/froid_adj_1_1.mp4" },
+      { word: "Beau", emoji: "✨", cat: "Émotions & ressenti", prio: "Plus tard", page: "beau", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/beau.mp4" },
+      { word: "Pleurer", emoji: "😭", cat: "Émotions & ressenti", prio: "Plus tard", page: "pleurer", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/pleurer_v_1_1_6.mp4" },
+
+      // Activités & jeu
+      { word: "Jouer", emoji: "🧩", cat: "Activités & jeu", prio: "À venir", page: "jouer", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/jouer_v_1_1.mp4" },
+      { word: "Chanter", emoji: "🎤", cat: "Activités & jeu", prio: "À venir", page: "chanter", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/chant_nm_2_1.mp4" },
+      { word: "Musique", emoji: "🎵", cat: "Activités & jeu", prio: "À venir", page: "musique", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/musique_nf_1_1.mp4" },
+      { word: "Histoire - Livre", emoji: "📖", cat: "Activités & jeu", prio: "À venir", page: "livre", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/28_livre_1__nf_1td001-encoded.mp4" },
+      { word: "Écouter", emoji: "👂", cat: "Activités & jeu", prio: "Plus tard", page: "écouter", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/ecouter_v_1_1.mp4" },
+      { word: "Ranger", emoji: "📦", cat: "Activités & jeu", prio: "Plus tard", page: "ranger", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/ranger.mp4" },
+      { word: "Se cacher", emoji: "🙈", cat: "Activités & jeu", prio: "Plus tard", page: "cacher", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/cacher_v_1_1.mp4" },
+      { word: "Partir", emoji: "🚶", cat: "Activités & jeu", prio: "Plus tard", page: "partir", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/partir_v_1-2.mp4" },
+      { word: "Revenir", emoji: "🔄", cat: "Activités & jeu", prio: "Plus tard", page: "revenir", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/revenir_v_1.mp4" },
+      { word: "Venir", emoji: "👉", cat: "Activités & jeu", prio: "Plus tard", page: "venir", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/venir_v_1_1.mp4" },
+      { word: "Travailler", emoji: "💼", cat: "Activités & jeu", prio: "Plus tard", page: "travailler", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/travailler_v_3_1_6.mp4" },
+      { word: "Se débrouiller", emoji: "💪", cat: "Activités & jeu", prio: "Plus tard", page: "débrouiller", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/debrouiller_v_2_6.mp4" },
+
+      // Communication & politesse
+      { word: "Oui", emoji: "✅", cat: "Communication & politesse", prio: "À venir", page: "oui", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/oui_adv_1_1.mp4" },
+      { word: "Non", emoji: "❌", cat: "Communication & politesse", prio: "À venir", page: "non", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/non_adv_1_1.mp4" },
+      { word: "Bonjour - Merci", emoji: "🙏", cat: "Communication & politesse", prio: "À venir", page: "bonjour", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/bonjour-3.mp4" },
+      { word: "Bisous", emoji: "😘", cat: "Communication & politesse", prio: "À venir", page: "bisou", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/00242-2.mp4" },
+      { word: "Au revoir", emoji: "👋", cat: "Communication & politesse", prio: "À venir", page: "revoir", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/revoir_v_1_2.mp4" },
+      { word: "S'il te plaît", emoji: "🥺", cat: "Communication & politesse", prio: "Plus tard", page: "s'il te plaît", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/02252.mp4" },
+      { word: "Pardon", emoji: "🙇", cat: "Communication & politesse", prio: "Plus tard", page: "pardon", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/pardon_nm_3_1.mp4" },
+
+      // Consignes & sécurité
+      { word: "Arrêter", emoji: "✋", cat: "Consignes & sécurité", prio: "À venir", page: "arrêter", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/41_arreter_1__v_1td001-encoded.mp4" },
+      { word: "Interdit", emoji: "🚫", cat: "Consignes & sécurité", prio: "Plus tard", page: "interdit", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/interdit.mp4" },
+      { word: "Important", emoji: "⚠️", cat: "Consignes & sécurité", prio: "Plus tard", page: "important", video: "https://elix-lsf.s3.rbx.io.cloud.ovh.net/spip_videos/important_adj_1_1.mp4" },
+    ];
+
+    // Sort alphabétique global (les sections feront le regroupement)
+    signs.sort((a, b) => a.word.localeCompare(b.word, "fr", { sensitivity: "base" }));
+
+    const sectionsEl = document.getElementById("sections");
+    const filtersEl = document.getElementById("filters");
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalVideo = document.getElementById("modal-video");
+    const modalLink = document.getElementById("modal-link");
+    const closeBtn = document.getElementById("close-btn");
+    const search = document.getElementById("search");
+
+    let currentCat = "all";
+    let currentSearch = "";
+
+    function renderFilters() {
+      filtersEl.innerHTML = "";
+      const allCats = ["all", ...Object.keys(CATS)];
+      allCats.forEach(c => {
+        const btn = document.createElement("button");
+        btn.className = "filter-btn" + (c === currentCat ? " active" : "");
+        btn.type = "button";
+        btn.textContent = c === "all" ? "Tous" : c;
+        if (c !== "all" && c === currentCat) {
+          btn.style.background = CATS[c].color;
+          btn.style.borderColor = CATS[c].color;
+        }
+        btn.addEventListener("click", () => {
+          currentCat = c;
+          renderFilters();
+          renderSections();
+        });
+        filtersEl.appendChild(btn);
+      });
+    }
+
+    let lastTrigger = null;
+
+    function openModal(sign, triggerEl) {
+      lastTrigger = triggerEl;
+      modalTitle.innerHTML = `<span style="font-size:1.5rem">${sign.emoji}</span> ${sign.word}`;
+      modalVideo.src = sign.video;
+      modalLink.href = `https://dico.elix-lsf.fr/dictionnaire/${encodeURI(sign.page)}`;
+      modal.classList.add("open");
+      document.body.style.overflow = "hidden";
+      // Focus le bouton fermer pour navigation clavier
+      requestAnimationFrame(() => closeBtn.focus());
+      modalVideo.play().catch(() => {});
+    }
+
+    function closeModal() {
+      modal.classList.remove("open");
+      modalVideo.pause();
+      modalVideo.removeAttribute("src");
+      modalVideo.load();
+      document.body.style.overflow = "";
+      // Rend le focus à la card d'origine pour la navigation clavier
+      if (lastTrigger) { lastTrigger.focus(); lastTrigger = null; }
+    }
+
+    function makeCard(sign) {
+      const card = document.createElement("button");
+      card.className = "card";
+      card.type = "button";
+      const catCfg = CATS[sign.cat];
+      const tagHtml = `<span class="tag" style="background:${catCfg.bg};color:${catCfg.color}">${sign.cat}</span>`;
+      card.innerHTML = `
+        <span class="emoji">${sign.emoji}</span>
+        <span class="word">${sign.word}</span>
+        ${tagHtml}
+      `;
+      card.setAttribute("aria-label", `Voir le signe : ${sign.word}, catégorie ${sign.cat}`);
+      card.addEventListener("click", () => openModal(sign, card));
+      return card;
+    }
+
+    function renderSections() {
+      sectionsEl.innerHTML = "";
+      const filtered = signs.filter(s => {
+        const matchCat = currentCat === "all" || s.cat === currentCat;
+        const matchSearch = !currentSearch || s.word.toLowerCase().includes(currentSearch);
+        return matchCat && matchSearch;
+      });
+
+      PRIORITIES.forEach(prio => {
+        const items = filtered.filter(s => s.prio === prio);
+        if (items.length === 0) return;
+
+        const section = document.createElement("section");
+        section.className = "section";
+
+        const header = document.createElement("div");
+        header.className = "section-header";
+        header.innerHTML = `
+          <h2 class="section-title">${prio}</h2>
+          <span class="section-count">${items.length} signe${items.length > 1 ? "s" : ""}</span>
+        `;
+        section.appendChild(header);
+
+        const grid = document.createElement("div");
+        grid.className = "grid";
+        items.forEach(s => grid.appendChild(makeCard(s)));
+        section.appendChild(grid);
+
+        sectionsEl.appendChild(section);
+      });
+
+      if (sectionsEl.children.length === 0) {
+        const empty = document.createElement("p");
+        empty.className = "empty";
+        empty.textContent = "Aucun signe ne correspond à la recherche.";
+        sectionsEl.appendChild(empty);
+      }
+    }
+
+    renderFilters();
+    renderSections();
+
+    search.addEventListener("input", e => {
+      currentSearch = e.target.value.trim().toLowerCase();
+      renderSections();
+    });
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+  </script>
+</body>
+</html>
